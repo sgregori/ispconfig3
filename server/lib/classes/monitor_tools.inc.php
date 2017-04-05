@@ -242,7 +242,7 @@ class monitor_tools {
 		//* The state of the email_quota.
 		$state = 'ok';
 
-		$mailboxes = $app->db->queryAllRecords("SELECT email,maildir FROM mail_user WHERE server_id = $server_id AND maildir!='/var/mail//' ");
+		$mailboxes = $app->db->queryAllRecords("SELECT email,maildir FROM mail_user WHERE server_id = $server_id AND maildir!='/var/vmail//' ");
 		if(is_array($mailboxes)) {
 			foreach($mailboxes as $mb) {
 				$email = $mb['email'];
